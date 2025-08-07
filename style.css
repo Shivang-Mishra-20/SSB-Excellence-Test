@@ -1497,6 +1497,16 @@ footer {
         display: flex;
     }
 
+    .navbar .nav-links li {
+        margin: 0;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    
     .hamburger {
         display: block;
     }
@@ -1727,4 +1737,5 @@ footer {
     .testimonial-author {
         justify-content: center;
     }
+
 }
