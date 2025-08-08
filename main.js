@@ -132,13 +132,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
 function handleMobileMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     
     if (window.innerWidth <= 768) {
-        // Mobile-specific menu behavior
         if (hamburger && navLinks) {
             hamburger.addEventListener('click', function() {
                 navLinks.classList.toggle('active');
@@ -153,7 +151,6 @@ function handleMobileMenu() {
             });
         }
     } else {
-        // Reset for desktop
         if (navLinks) {
             navLinks.classList.remove('active');
             document.body.style.overflow = '';
@@ -161,17 +158,13 @@ function handleMobileMenu() {
     }
 }
 
-// Call on load and resize
 window.addEventListener('load', handleMobileMenu);
 window.addEventListener('resize', handleMobileMenu);
 
-// Add this for better touch experience on mobile
 document.addEventListener('DOMContentLoaded', function() {
     if ('ontouchstart' in window) {
-        // Add touch-specific classes or behaviors
         document.body.classList.add('touch-device');
         
-        // Make buttons more touch-friendly
         document.querySelectorAll('.btn').forEach(btn => {
             btn.style.padding = '12px 20px';
             btn.style.minWidth = '120px';

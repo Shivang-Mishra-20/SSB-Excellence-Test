@@ -1,10 +1,3 @@
-/* Final Updated CSS */
-
-html {
-    /* This scales down all rem units to 80% of the browser default */
-    font-size: 80%;
-}
-
 :root {
     --primary: #4a7729;
     --primary-dark: #3a5f20;
@@ -22,6 +15,10 @@ html {
     box-sizing: border-box;
 }
 
+html {
+    font-size: 80%;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.7;
@@ -34,7 +31,6 @@ h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     line-height: 1.3;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .container {
@@ -71,7 +67,6 @@ section {
     background: var(--secondary);
     bottom: -10px;
     left: 0;
-    transform: none;
 }
 
 .section-title p {
@@ -87,7 +82,7 @@ section {
     border-radius: 4px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.4s ease;
     text-align: center;
     cursor: pointer;
     border: none;
@@ -111,39 +106,6 @@ section {
     box-shadow: 0 10px 20px rgba(74, 119, 41, 0.3);
 }
 
-.btn-secondary {
-    background: var(--secondary);
-    color: white;
-    border: 2px solid var(--secondary);
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.btn-secondary:hover {
-    background: #c19d30;
-    border-color: #c19d30;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
-}
-
-.btn-secondary:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, var(--secondary), #e8c252);
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.btn-secondary:hover:before {
-    opacity: 1;
-}
-
 .btn-outline {
     background: transparent;
     color: var(--primary);
@@ -161,10 +123,6 @@ section {
     background: transparent;
     color: white;
     border: 2px solid white;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
 }
 
 .btn-outline-white:hover {
@@ -174,14 +132,25 @@ section {
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
 }
 
+.btn-secondary {
+    background: var(--secondary);
+    color: var(--dark);
+    border: 2px solid var(--secondary);
+}
+
+.btn-secondary:hover {
+    background: #c9a227;
+    border-color: #c9a227;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
 .cta-btns {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 20px;
 }
-
 
 .header {
     position: fixed;
@@ -362,7 +331,6 @@ section {
     font-weight: 600;
 }
 
-
 .about-section {
     position: relative;
     overflow: hidden;
@@ -433,7 +401,7 @@ section {
     padding: 25px;
     border-radius: 8px;
     border-left: 4px solid var(--primary);
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.4s ease;
     cursor: pointer;
 }
 
@@ -478,7 +446,6 @@ section {
     color: var(--primary);
 }
 
-
 .mission-vision {
     background: var(--light);
     position: relative;
@@ -509,7 +476,7 @@ section {
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     text-align: center;
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(0,0,0,0.05);
@@ -556,7 +523,6 @@ section {
     font-size: 1.3rem;
     color: var(--primary);
 }
-
 
 .team {
     position: relative;
@@ -655,7 +621,7 @@ section {
     transform: translateY(20px);
     animation: fadeInUp 0.6s ease forwards;
     will-change: transform, opacity;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.4s ease;
 }
 
 .info-item:hover {
@@ -674,7 +640,7 @@ section {
     margin-right: 20px;
     flex-shrink: 0;
     font-size: 1.2rem;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s ease;
     will-change: transform, background;
 }
 
@@ -764,7 +730,7 @@ section {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.4s ease;
     transform: translateY(0);
     opacity: 0;
     animation: fadeInUp 0.6s forwards;
@@ -935,7 +901,7 @@ section {
     transform: translateY(30px);
     animation: fadeInUp 0.6s ease forwards;
     will-change: transform;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s ease;
 }
 
 .contact-card:hover {
@@ -975,7 +941,6 @@ section {
 .contact-card a:hover {
     color: var(--primary-dark);
 }
-
 
 .map-section {
     padding: 0;
@@ -1060,7 +1025,6 @@ section {
     display: block;
 }
 
-
 .sidebar-card {
     background: white;
     border-radius: 8px;
@@ -1087,7 +1051,6 @@ section {
     color: var(--dark);
 }
 
-
 .cta {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: white;
@@ -1108,7 +1071,6 @@ section {
     margin: 0 auto 40px;
     font-size: 1.2rem;
 }
-
 
 footer {
     background: var(--dark);
@@ -1262,118 +1224,6 @@ footer {
     transform: translateY(-5px);
 }
 
-.hero .container {
-    position: relative;
-    z-index: 1;
-    animation: fadeInUp 1s ease;
-}
-
-.hero h1 {
-    animation: fadeInUp 1s ease 0.2s both;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.hero p {
-    animation: fadeInUp 1s ease 0.4s both;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.hero-btns {
-    animation: fadeInUp 1s ease 0.6s both;
-}
-
-
-.service-card:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    z-index: -1;
-    opacity: 0;
-    transition: all 0.4s ease;
-}
-
-.service-card:hover:before {
-    opacity: 1;
-}
-
-.service-card:hover i,
-.service-card:hover h3,
-.service-card:hover p {
-    color: white;
-}
-
-.service-card .btn {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    transition: all 0.4s ease;
-}
-
-.service-card:hover .btn {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-
-.stat-item {
-    animation: fadeIn 1s ease;
-}
-
-
-.testimonial-item {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 10px;
-    margin: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.4s ease;
-}
-
-.testimonial-grid {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.testimonial-image {
-    flex: 0 0 200px;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 3px solid var(--secondary);
-}
-
-.testimonial-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.testimonial-content-wrapper {
-    flex: 1;
-}
-
-.testimonial-author {
-    margin-top: 20px;
-    text-align: left;
-}
-
-.author-info h4 {
-    color: var(--secondary);
-    margin-bottom: 5px;
-}
-
-.author-info p {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
-}
-
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -1396,16 +1246,10 @@ footer {
     100% { transform: scale(1); }
 }
 
-
-/* --- Responsive Styles --- */
-
+/* Responsive Styles */
 @media (max-width: 1199px) {
     .page-banner h1 {
         font-size: 2.5rem;
-    }
-
-    .team-grid {
-        grid-template-columns: repeat(4, 1fr);
     }
 
     .details-container {
@@ -1434,10 +1278,6 @@ footer {
         margin-top: 30px;
     }
 
-    .team-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
     .team-member {
         width: calc(50% - 20px);
     }
@@ -1464,26 +1304,11 @@ footer {
         display: none;
     }
 
-    .section-title h2 {
-        font-size: 2rem;
-    }
-
-    .page-banner {
-        height: 350px;
-        background-attachment: scroll;
-        padding-top: 120px;
-    }
-
-    .page-banner h1 {
-        font-size: 2rem;
-        margin-top: 0;
-        padding-top: 80px;
-    }
-
+    /* Updated hamburger menu */
     .navbar .nav-links {
         display: none;
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 80px;
         left: 0;
         width: 100%;
         background: white;
@@ -1491,6 +1316,8 @@ footer {
         padding: 20px 0;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         z-index: 999;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
     }
 
     .navbar .nav-links.active {
@@ -1505,21 +1332,43 @@ footer {
 
     .hamburger {
         display: block;
-    }
-    
-    .hamburger {
-        display: block;
+        order: 1;
     }
 
-    .cta .btn-container, .cta-btns {
+    .logo {
+        order: 2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header .container {
+        justify-content: space-between;
+    }
+
+    /* Updated CTA buttons */
+    .cta .btn-container, 
+    .cta-btns {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .cta .btn {
         width: 100%;
         max-width: 250px;
         margin: 5px 0;
+    }
+
+    .page-banner {
+        height: 350px;
+        background-attachment: scroll;
+        padding-top: 120px;
+    }
+
+    .page-banner h1 {
+        font-size: 2rem;
+        margin-top: 0;
+        padding-top: 80px;
     }
 
     .about-features {
@@ -1538,10 +1387,6 @@ footer {
         flex-wrap: wrap;
     }
 
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
     .team-member {
         width: 100%;
     }
@@ -1561,38 +1406,6 @@ footer {
         border-radius: 50%;
     }
 }
-
-@media (max-width: 576px) {
-    section {
-        padding: 60px 0;
-    }
-
-    .page-banner {
-        height: 300px;
-        padding-top: 100px;
-    }
-
-    .page-banner h1 {
-        font-size: 1.8rem;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
-    .mv-container,
-    .team-grid,
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-}
-
-.info-item:nth-child(1) { animation-delay: 0.1s; }
-.info-item:nth-child(2) { animation-delay: 0.2s; }
-.info-item:nth-child(3) { animation-delay: 0.3s; }
-.info-item:nth-child(4) { animation-delay: 0.4s; }
-.info-item:nth-child(5) { animation-delay: 0.5s; }
 
 @media (max-width: 480px) {
     html {
@@ -1737,5 +1550,4 @@ footer {
     .testimonial-author {
         justify-content: center;
     }
-
 }
